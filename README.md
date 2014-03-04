@@ -5,7 +5,7 @@
 
 ## Install
 
-Open Atom Preferences, select Themes > Search for `unity-ui`,
+Open Atom Preferences, select Themes > Search for `unity`,
 then Install.
 
 Activate the theme by selecting the Themes section of Preferences.

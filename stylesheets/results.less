@@ -38,6 +38,21 @@
     border-collapse:collapse;
     width:100%;
 
+    .highlight-info, .highlight-error, .highlight-success {
+      border-radius:2px;
+      background:#3E9AD3;
+      color:#fff;
+      padding:2px;
+    }
+
+    .highlight-error {
+      background:#D54426;
+    }
+
+    .highlight-success {
+      background:#6FC44C;
+    }
+
     li.search-result {
       font-size:11px;
       display:table-row;
@@ -63,6 +78,16 @@
 
       &.selected + li > span {
         box-shadow:none;
+      }
+
+      &.selected {
+        .highlight-info, .highlight-success {
+          background:rgba(255,255,255,0.4);
+        }
+
+        .highlight-error {
+          background:rgba(0,0,0,0.4);
+        }
       }
 
       span.line-number {

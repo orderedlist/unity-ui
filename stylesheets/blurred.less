@@ -1,0 +1,14 @@
+.is-blurred .tree-view {
+  background: #f3f3f3;
+}
+
+.is-blurred .tree-view .selected:before {
+  background-image: linear-gradient(#efefef, #e1e1e1);
+  box-shadow:inset rgba(255,255,255,0.6) 0 2px 0, inset rgba(0,0,0,0.4) 0 1px, inset rgba(0,0,0,0.1) 0 -1px;
+}
+
+.is-blurred .tree-view .selected.entry > .name,
+.is-blurred .tree-view .selected.entry > .header > .name {
+  color:#555;
+  text-shadow:rgba(255,255,255,0.4) 0 1px;
+}

@@ -1,0 +1,46 @@
+.status-bar.tool-panel {
+  color: #333;
+  text-shadow:rgba(255,255,255,0.4) 0 1px;
+  height:28px;
+  line-height:23px;
+
+  .prompt {
+    margin-bottom:3px;
+    position:relative;
+  }
+
+  .prompt:before {
+    color:rgba(0,0,0,0.2);
+    line-height:1;
+    top:1px;
+    display:inline-block;
+    position:relative;
+  }
+
+  .git-status.octicons.modified-status-icon {
+    color: #f78a46;
+    display: inline-block;
+  }
+
+  .git-status.octicons.new-status-icon {
+    color: #5293d8;
+    display: inline-block;
+  }
+
+  .git-status.octicons.ignored-status-icon {
+    color: #333;
+    display: inline-block;
+  }
+
+  .grammar-name {
+    margin:-3px;
+    padding:2px;
+    border:1px solid transparent;
+  }
+
+  .grammar-name:hover {
+    color: #000;
+    border: 1px solid rgba(50, 50, 50, 0.2);
+    border-radius: 2px;
+  }
+}

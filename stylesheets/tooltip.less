@@ -1,0 +1,40 @@
+@tooltip-arrow-color: #f8f8f8;
+
+.tooltip-inner {
+  background:#f8f8f8;
+  border-radius:5px;
+  font-size:12px;
+  color:#333;
+  text-shadow:#fff 0 1px 0;
+  padding:10px 12px;
+  box-shadow:rgba(0,0,0,0.25) 0 0 0 1px, rgba(0,0,0,0.25) 0 1px 3px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.tooltip {
+  &.top .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-left .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.top-right .tooltip-arrow {
+    border-top-color: @tooltip-arrow-color;
+  }
+  &.right .tooltip-arrow {
+    border-right-color: @tooltip-arrow-color;
+  }
+  &.left .tooltip-arrow {
+    border-left-color: @tooltip-arrow-color;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-left .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+  &.bottom-right .tooltip-arrow {
+    border-bottom-color: @tooltip-arrow-color;
+  }
+}

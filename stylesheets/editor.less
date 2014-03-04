@@ -1,0 +1,54 @@
+.editor.mini {
+  //border-radius:0;
+  background: #FFF;
+  -webkit-appearance:textfield;
+  // border: 1px solid rgba(0,0,0,0.25);
+  // box-shadow:inset rgba(0,0,0,0.1) 0 2px 3px;
+  box-sizing:border-box;
+  font-family:"Lucida Grande" !important;
+  font-size:12px;
+  padding: 0 5px;
+
+  .placeholder-text {
+    color:#999;
+  }
+
+  .cursor {
+    border-color:#ccc;
+  }
+
+  .gutter.drop-shadow {
+    -webkit-box-shadow: -2px 0px 10px 2px #222222;
+  }
+
+  // &.is-focused {
+  //   outline: auto 5px -webkit-focus-ring-color;
+  // }
+}
+
+.editor-colors.mini {
+  color:#555;
+}
+
+.editor.mini .selection .region {
+  background-color: rgba(56,146,227,0.25);
+}
+
+@-webkit-keyframes highlight {
+  from {
+    background-color: rgba(56,146,227,0.7);
+  }
+  to {
+    background-color: null;
+  }
+}
+
+.editor .highlighted.selection .region {
+  -webkit-animation-name: highlight;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+}
+
+.editor .invisible-character {
+  opacity:0.25;
+}

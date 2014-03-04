@@ -1,4 +1,6 @@
-# An Atom theme for a more native experience on OS X
+# Unity UI
+
+An Atom theme for a more native experience on OS X
 
 ![The Pretty](https://f.cloud.github.com/assets/1680/2325643/3fe45fe8-a3d8-11e3-92ce-c816ca63a817.png)
 

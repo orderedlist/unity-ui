@@ -2,7 +2,7 @@
 
 An Atom theme for a more native experience on OS X
 
-![The Pretty](https://f.cloud.github.com/assets/1680/2325643/3fe45fe8-a3d8-11e3-92ce-c816ca63a817.png)
+![The Pretty](https://f.cloud.github.com/assets/1680/2325767/07d5e12e-a3da-11e3-865b-4613a30823f7.png)
 
 
 ## Install

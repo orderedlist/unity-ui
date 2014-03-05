@@ -121,7 +121,7 @@
 
 .tree-view .entry > .header > .name:before,
 .tree-view .entry > .name:before {
-  display:none;
+  display:inline-block;
 }
 
 .tree-view .entry.selected > .header > .name:before,
@@ -222,4 +222,11 @@
 .tree-view-dialog {
   font:13px "Lucida Grande";
   font-weight:normal;
+}
+
+.icon-file-directory:before {
+  background: -webkit-linear-gradient(top, rgb(205, 217, 228) 1%, rgb(53, 89, 134) 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #355986;
 }

@@ -7,7 +7,13 @@ An Atom theme for a more native experience on OS X
 
 ## Install
 
-Open Atom Preferences, select Themes > Search for `unity`,
+From the command line:
+
+```bash
+$ apm install unity-ui
+```
+
+Alternatively, open Atom Preferences, select Themes > Search for `unity`,
 then Install.
 
 Activate the theme by selecting the Themes section of Preferences.

@@ -10,10 +10,9 @@
 }
 
 .tree-view-scroller {
-  border-right: 1px solid #717171;
   border-top:1px solid #717171;
   overflow-x:hidden;
-  
+
   .is-blurred & {
     border-color:#989898;
   }
@@ -21,6 +20,14 @@
   .unity-ui-fullscreen & {
     border-top:none;
   }
+}
+
+.panel-left .tree-view-scroller {
+  border-right: 1px solid #717171;
+}
+
+.panel-right .tree-view-scroller {
+  border-left: 1px solid #717171;
 }
 
 .header.list-item {

@@ -1,12 +1,8 @@
 .tree-view {
   font:11px/15px "Lucida Grande";
   background: #DDE3E8;
-  border-right:4px solid #DDE3E8;
-  min-width:-webkit-min-content;
-  min-height:100%;
-  padding-left:5px;
-  padding-right:10px;
-  position:relative;
+  padding:4px 6px;
+  min-width:0;
 }
 
 .focusable-panel {
@@ -15,9 +11,7 @@
 
 .tree-view-scroller {
   border-top:1px solid #717171;
-  height:100%;
-  width:100%;
-  overflow:auto;
+  overflow-x:hidden;
 
   .is-blurred & {
     border-color:#989898;
@@ -101,7 +95,6 @@
     inset rgba(135,147,150,0.56) 0 1px 0,
     inset rgba(135,147,150,0.56) 0 -1px 0,
     inset rgba(255,255,255,0.42) 0 2px 0;
-  margin-right:-4px;
 }
 
 .tree-view:focus .selected:before {
@@ -110,7 +103,6 @@
   border-width:1px 0 0;
   color:#fff;
   text-shadow:rgba(0,0,0,0.4) 0 1px;
-  margin-right:-4px;
 }
 
 .tree-view:focus .selected.new:before,
@@ -229,8 +221,30 @@
   display:none;
 }
 
-
 .tree-view-dialog {
   font:13px "Lucida Grande";
   font-weight:normal;
+}
+
+.tree-view-scrolls-horizontally {
+  height:100%;
+  width:100%;
+  overflow-x:auto;
+  overflow-y:auto;
+
+  .tree-view {
+    border-right:4px solid #DDE3E8;
+    min-width:-webkit-min-content;
+    min-height:100%;
+    padding-right:10px;
+    position:relative;
+  }
+
+  .tree-view .selected:before {
+    margin-right:-4px;
+  }
+
+  .tree-view:focus .selected:before {
+    margin-right:-4px;
+  }
 }

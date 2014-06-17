@@ -221,8 +221,30 @@
   display:none;
 }
 
-
 .tree-view-dialog {
   font:13px "Lucida Grande";
   font-weight:normal;
+}
+
+.tree-view-scrolls-horizontally {
+  height:100%;
+  width:100%;
+  overflow-x:auto;
+  overflow-y:auto;
+
+  .tree-view {
+    border-right:4px solid #DDE3E8;
+    min-width:-webkit-min-content;
+    min-height:100%;
+    padding-right:10px;
+    position:relative;
+  }
+
+  .tree-view .selected:before {
+    margin-right:-4px;
+  }
+
+  .tree-view:focus .selected:before {
+    margin-right:-4px;
+  }
 }

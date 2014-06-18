@@ -1,20 +1,22 @@
 .tree-view {
   font:11px/15px "Lucida Grande";
-  background: #DDE3E8;
   padding:4px 6px;
   min-width:0;
+  overflow:hidden;
 }
 
 .focusable-panel {
   opacity: 1;
 }
 
-.tree-view-scroller {
+.tree-view-resizer {
+  background: #DDE3E8;
   border-top:1px solid #717171;
-  overflow-x:hidden;
 
   .is-blurred & {
-    border-color:#989898;
+    &.panel-left, &.panel-right {
+      border-color:#989898;
+    }
   }
 
   .unity-ui-fullscreen & {
@@ -22,11 +24,15 @@
   }
 }
 
-.panel-left .tree-view-scroller {
+.tree-view-scroller {
+  overflow-x:hidden;
+}
+
+.panel-left.tree-view-resizer {
   border-right: 1px solid #717171;
 }
 
-.panel-right .tree-view-scroller {
+.panel-right.tree-view-resizer {
   border-left: 1px solid #717171;
 }
 
@@ -68,16 +74,17 @@
   text-shadow: rgba(255,255,255,0.6) 0 1px;
   display:inline-block;
   position:relative;
+  width:100%;
   left:0;
   top:0;
   right:0;
-  width:100%;
   overflow:hidden;
   text-overflow:ellipsis;
   box-sizing:border-box;
   white-space:nowrap;
   line-height:21px;
   padding-left:15px;
+  padding-right:20px;
 }
 
 .tree-view .entry.status-new > .name,
@@ -221,8 +228,20 @@
   display:none;
 }
 
-
 .tree-view-dialog {
   font:13px "Lucida Grande";
   font-weight:normal;
+}
+
+.tree-view-scrolls-horizontally {
+  height:100%;
+  overflow-x:auto;
+  overflow-y:auto;
+  width:100%;
+
+  .tree-view {
+    min-width:-webkit-min-content;
+    min-height:100%;
+    position:relative;
+  }
 }

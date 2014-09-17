@@ -11,6 +11,13 @@ module.exports =
         else
           $('.tree-view-scroller').removeClass('tree-view-scrolls-horizontally')
 
+      useragent = navigator.userAgent
+
+      if matches = useragent.match(/Mac OS X 10_([0-9]+)_[0-9]+/i)
+        version = parseInt(matches[1], 10)
+        osstyle = if version >= 10 then 'unity-mac-new' else 'unity-mac-old'
+        $(document.body).addClass osstyle
+
       $(window).on 'resize', @checkFullscreen
 
       @checkFullscreen()

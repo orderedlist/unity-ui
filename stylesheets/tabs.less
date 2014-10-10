@@ -165,11 +165,13 @@
     height:26px;
     background: linear-gradient(#CDCCCD,#C7C6C7);
     display:table;
+    table-layout: fixed;
     width:100%;
     padding:0;
   }
 
   .tab-bar .tab {
+    width:100%;
     box-sizing:border-box;
     padding:0 20px!important;
     line-height:24px;
@@ -202,14 +204,14 @@
   .tab:hover.active {
     color:#202020;
     background: linear-gradient(#DDDCDD, #D6D5D6);
-    border:solid 1px red;
+    border-width:1px 0 1px 1px;
     border-top-color:#B5B4B5;
     border-left-color:#B7B6B7;
-    border-right-color:#B7B6B7;
     border-bottom-color:#A8A7A8;
+    padding:0 20px !important;
 
-    & + .tab {
-        border-left:none;
+    & .title {
+      padding:0;
     }
 
     &:first-child {

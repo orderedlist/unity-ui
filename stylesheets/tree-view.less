@@ -14,14 +14,14 @@
   border-top:1px solid #717171;
   -webkit-backface-visibility:hidden;
 
-  .is-blurred & {
-    &.panel-left, &.panel-right {
-      border-color:#989898;
-    }
-  }
-
-  .unity-ui-fullscreen & {
+  .fullscreen & {
     border-top:none;
+  }
+}
+
+.is-blurred {
+  atom-panel.left, atom-panel.right {
+    border-color:#989898;
   }
 }
 
@@ -29,11 +29,11 @@
   overflow-x:hidden;
 }
 
-.panel-left .tree-view-resizer {
+atom-panel.left .tree-view-resizer {
   border-right: 1px solid #717171;
 }
 
-.panel-right .tree-view-resizer {
+atom-panel.right .tree-view-resizer {
   border-left: 1px solid #717171;
 }
 
@@ -244,7 +244,7 @@
     font:11px/15px "Helvetica Neue";
   }
 
-  .tree-view-resizer {
+  atom-panel .tree-view-resizer {
     border-top:1px solid #b0b0b0;
     background:#EEF5F6;
     border-color:#b0b0b0;

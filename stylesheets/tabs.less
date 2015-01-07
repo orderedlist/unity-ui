@@ -12,7 +12,7 @@
       box-shadow:inset 0 1px #f3f3f3, inset 0 2px 0 #717171, inset 0 -1px 0 #6f6f6f;
     }
 
-    .pane-column > * + * &, .pane-column + * > .pane &, .panes:not(:first-child) & {
+    atom-pane-axis.vertical > * + * &, atom-pane-axis.vertical + * > atom-pane &, atom-pane-container:not(:first-child) & {
       height:26px;
       padding-top:1px;
       box-shadow:inset 0 1px 0 #AEADAD, inset 0 2px 0 #717171, inset 0 -1px 0 #6f6f6f;
@@ -23,7 +23,7 @@
     }
   }
 
-  .panes:not(:first-child) {
+  atom-pane-container:not(:first-child) {
     border-top:none;
   }
 

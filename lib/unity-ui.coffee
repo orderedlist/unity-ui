@@ -1,7 +1,9 @@
 addClass = (el, klass) ->
+  return unless el
   el.className = "#{el.className} #{klass}"
 
 removeClass = (el, klass) ->
+  return unless el
   classes = el.className.split(' ')
   index = classes.indexOf(klass)
   classes.splice(index, 1) if index >= 0

@@ -71,6 +71,10 @@
       padding:0 @component-padding;
       line-height:@component-padding*3;
       color:@text-color;
+
+      & + .container {
+        padding-top:@component-padding;
+      }
     }
 
     div:empty {
@@ -107,12 +111,24 @@
     }
   }
 
+  h3 + .container.package-container .row {
+    margin-top:-@component-padding;
+  }
+
   .container.package-container {
     margin-top:-@component-padding;
   }
 
   .container > .row {
-    margin:0 -@component-padding;
+    margin:0 -@component-padding @component-padding;
+  }
+
+  .container .featured-message {
+    margin-top:@component-padding*2;
+  }
+
+  .container + .container {
+    margin-top:-@component-padding;
   }
 
   .available-package-view {
@@ -141,7 +157,32 @@
     }
   }
 
+  .installed-package-view {
+    .link {
+      margin:0;
+    }
+
+    .text {
+      margin:0 0 @component-padding
+    }
+  }
+
   .themes-panel .control-group {
     margin-top:@component-padding;
+  }
+
+  .breadcrumb {
+    border-bottom:1px solid fade(@pane-item-border-color, 20%);
+    background:@tool-panel-background-color;
+    font-size:13px;
+    font-weight:500;
+    margin:0;
+    padding:0 @component-padding;
+    line-height:@component-padding*3;
+    color:@text-color;
+
+    & + .section {
+      margin-top:-1px;
+    }
   }
 }

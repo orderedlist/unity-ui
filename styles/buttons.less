@@ -1,0 +1,127 @@
+.btn {
+  font-size:@font-size;
+  height:24px;
+  box-shadow:0 0 3px 7px fade(#92bcea, 0), 0 1px 0 rgba(0,0,0,0.1);
+  transition:box-shadow 0.1s ease-in-out;
+
+  &:active {
+    background:#f4f4f4;
+    box-shadow:inset #fff 0 1px 0, rgba(0,0,0,0.1) 0 1px 0;
+    outline:none;
+  }
+
+  &:focus, &.selected {
+    box-shadow:0 0 0px 3px #92bcea;
+    outline:none;
+  }
+
+  &.btn-primary {
+    color:@text-color-selected;
+    background:@background-color-selected;
+
+    &:hover {
+      color:@text-color-selected;
+    }
+
+    &:active, &.selected {
+      background:darken(@background-color-selected, 10%);
+      color:@text-color-selected;
+    }
+  }
+
+  &.btn-info {
+    color:@text-color-selected;
+    background:@background-color-info;
+
+    &:hover {
+      color:@text-color-selected;
+    }
+
+    &:active, &.selected {
+      background:darken(@background-color-info, 10%);
+      color:@text-color-selected;
+    }
+  }
+
+  &.btn-success {
+    color:@text-color-selected;
+    background:@background-color-success;
+
+    &:hover {
+      color:@text-color-selected;
+    }
+
+    &:active, &.selected {
+      background:darken(@background-color-success, 10%);
+      color:@text-color-selected;
+    }
+  }
+
+  &.btn-warning {
+    color:@text-color-selected;
+    background:@background-color-warning;
+
+    &:hover {
+      color:@text-color-selected;
+    }
+
+    &:active, &.selected {
+      background:darken(@background-color-warning, 10%);
+      color:@text-color-selected;
+    }
+  }
+
+  &.btn-error {
+    color:@text-color-selected;
+    background:@background-color-error;
+
+    &:hover {
+      color:@text-color-selected;
+    }
+    
+    &:active, &.selected {
+      background:darken(@background-color-error, 10%);
+      color:@text-color-selected;
+    }
+  }
+
+  &.icon:before {
+    margin-right:5px;
+  }
+
+}
+
+.btn-group {
+  .btn {
+    box-shadow:rgba(0,0,0,0.1) 0 1px 0;
+    margin:0;
+    border:none;
+
+    & + .btn {
+      box-shadow:inset rgba(0,0,0,0.05) 1px 0 0, rgba(0,0,0,0.1) 0 1px 0;
+      margin-left:0;
+    }
+
+    &.selected {
+      background:#6a6a6a;
+      color:#fff;
+      box-shadow:inset rgba(0,0,0,0.15) 1px 0 0, inset rgba(0,0,0,0.15) -1px 0 0, rgba(0,0,0,0.1) 0 1px 0;
+
+      & + .btn {
+        box-shadow:rgba(0,0,0,0.1) 0 1px 0;
+
+        &.selected {
+          box-shadow:inset rgba(0,0,0,0.15) -1px 0 0, rgba(0,0,0,0.1) 0 1px 0;
+        }
+      }
+    }
+  }
+}
+
+.find-and-replace .btn-group-options.btn-group .btn {
+  width:35px;
+
+  &:first-child {
+    width:34px;
+  }
+}

@@ -1,0 +1,48 @@
+@item-height: 21px;
+
+.list-tree {
+  li:not(.list-nested-item),
+  li.list-nested-item > .list-item {
+    line-height:@item-height;
+    min-height:@item-height;
+  }
+
+  &.has-collapsable-children .list-nested-item.collapsed > .list-item:before {
+    content:'▶';
+    font-size:10px;
+    top:0px;
+    left:-7px;
+    opacity:0.5;
+  }
+
+  &.has-collapsable-children .list-nested-item > .list-item:before {
+    content:'▼';
+    font-size:10px;
+    top:1px;
+    left:-7px;
+    opacity:0.5;
+  }
+}
+
+.list-group, .list-tree {
+  li {
+    min-height:@item-height;
+    box-sizing:border-box;
+  }
+
+  .icon:before {
+    margin-right:4px;
+  }
+
+  .no-icon {
+    padding-left:20px;
+  }
+
+  .icon:before {
+    display:none;
+  }
+
+  .unity-ui-show-icons & .icon:before {
+    display:inline-block;
+  }
+}

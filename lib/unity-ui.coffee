@@ -11,19 +11,19 @@ removeClass = (el, klass) ->
 
 module.exports =
   configDefaults:
-    allowTreeViewToScrollHorizontally: false
+    showIcons: false
+    colorStatusIndicatorsInTreeView: false
 
   activate: (state) ->
-    atom.config.observe 'unity-ui.allowTreeViewToScrollHorizontally', ->
-      scroller = document.getElementsByClassName('tree-view-scroller')[0]
-      if atom.config.get('unity-ui.allowTreeViewToScrollHorizontally')
-        addClass(scroller, 'tree-view-scrolls-horizontally')
+    atom.config.observe 'unity-ui.showIcons', ->
+      body = document.body
+      if atom.config.get('unity-ui.showIcons')
+        addClass(body, 'unity-ui-show-icons')
       else
-        removeClass(scroller, 'tree-view-scrolls-horizontally')
-
-    useragent = navigator.userAgent
-
-    if matches = useragent.match(/Mac OS X 10_([0-9]+)_[0-9]+/i)
-      version = parseInt(matches[1], 10)
-      osstyle = if version >= 10 then 'unity-mac-new' else 'unity-mac-old'
-      addClass(document.body, osstyle)
+        removeClass(body, 'unity-ui-show-icons')
+    atom.config.observe 'unity-ui.colorStatusIndicatorsInTreeView', ->
+      treeView = document.querySelector('.tree-view')
+      if atom.config.get('unity-ui.colorStatusIndicatorsInTreeView')
+        removeClass(treeView, 'unity-ui-fade-status')
+      else
+        addClass(treeView, 'unity-ui-fade-status')

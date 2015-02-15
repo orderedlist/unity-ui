@@ -1,0 +1,116 @@
+.tab-bar {
+  border-top:1px solid @pane-item-border-color;
+  border-bottom:1px solid #b7b5b7;
+  font-size:@font-size - 1;
+  height:27px;
+  background: linear-gradient(@tab-background-color,#C7C6C7);
+  display:table;
+  table-layout: fixed;
+  width:100%;
+  padding:0;
+  -webkit-transform:scale(1);
+
+  .tab {
+    width:100%;
+    box-sizing:border-box;
+    padding:0 20px!important;
+    line-height:24px;
+    color:#696869;
+    text-align:center;
+    position:relative;
+    border-left:1px solid #b7b5b7;
+    display:table-cell;
+
+    &:first-child {
+      border-left:none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    .title.icon::before {
+      font-size: 12px;
+      height: 12px;
+      width: 12px;
+    }
+  }
+
+  .tab.active,
+  .tab:hover.active {
+    color:#202020;
+    background: linear-gradient(@tab-background-color-active, #D6D5D6);
+    border-width:1px 0 1px 1px;
+    border-top-color:#B5B4B5;
+    border-left-color:#B7B6B7;
+    border-bottom-color:#A8A7A8;
+    width:100%;
+
+    & .title {
+      padding:0;
+    }
+
+    &:first-child {
+      border-left:none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .tab .close-icon {
+    color:rgb(93, 93, 93) !important;
+    cursor:default;
+    top:4px;
+    left:4px;
+    height:16px;
+    width:16px;
+    right:auto;
+    position:absolute;
+    display:none;
+    border-radius:2px;
+
+    &:before {
+      content:'✕';
+      position:absolute;
+      top:2px;
+      left:2px;
+      width:12px;
+      height:13px;
+    }
+
+    &:hover {
+      background:rgb(194, 194, 194);
+    }
+  }
+
+  .tab.modified:not(:hover) .close-icon {
+    display:block;
+    top: 8px;
+    left: 8px;
+  }
+
+  .tab:hover .close-icon {
+    display:block;
+  }
+
+  .is-blurred & {
+    background:#E4E4E4;
+
+    .tab {
+      border-right-color:#ADADAD;
+      border-left-color:#ADADAD;
+      color:#727272;
+    }
+
+    .tab.active,
+    .tab:hover.active {
+      background:#F5F5F5;
+    }
+  }
+
+  .icon:before {
+    margin-right:3px;
+  }
+}

@@ -1,0 +1,41 @@
+atom-text-editor[mini] {
+  padding-left: 0;
+  font-size:@font-size;
+  padding:4px 0;
+  border-radius: @component-border-radius;
+  color: @text-color-highlight;
+  border:none;
+  font-family:@font-family;
+  background-color: @input-background-color;
+  padding-left: @component-padding/2;
+  box-shadow:0 0 3px 7px fade(#92bcea, 0), 0 1px 0 rgba(0,0,0,0.1);
+  transition:box-shadow 0.1s ease-in-out;
+  height:24px;
+
+  &,
+  &::shadow {
+    .placeholder-text {
+      color: @text-color-subtle;
+    }
+    .selection .region {
+      background-color: #ededed;
+    }
+    .cursor {
+      border-color: #222;
+      border-width: 1px;
+    }
+  }
+
+  &.is-focused,
+  &.is-focused::shadow {
+    background-color: #fff;
+    opacity:1;
+    outline:none;
+    box-shadow:0 0 0px 3px #92bcea;
+    border:none;
+
+    .selection .region {
+      background-color: #B2D7FF;
+    }
+  }
+}

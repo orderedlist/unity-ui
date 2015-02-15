@@ -1,0 +1,147 @@
+.settings-view {
+
+  .icon:before {
+    opacity:0.3;
+  }
+
+  .checkbox {
+    padding-left: 20px;
+
+    input[type="checkbox"] {
+      all: unset;
+      -webkit-appearance: checkbox;
+      float: left;
+      margin: 2px 0 0 -20px;
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  .config-menu {
+    background:@pane-item-background-color;
+    border-color:fade(@pane-item-border-color, 30%);
+    padding-top:0;
+
+    .button-area {
+      margin:@component-padding;
+    }
+
+    .panels-menu {
+      font-weight:500;
+
+      li {
+        border-bottom:1px solid fade(@pane-item-border-color, 20%);
+
+        a {
+          padding:0 @component-padding;
+          line-height:@component-padding*3;
+        }
+      }
+    }
+  }
+
+  div > section.section.settings-panel {
+    border-top:1px solid fade(@pane-item-border-color, 20%);
+  }
+
+  .section, .section:first-child, .section:last-child {
+    padding:@component-padding;
+    border-color:fade(@pane-item-border-color, 20%);
+
+    .section-container {
+      max-width:100%;
+    }
+
+    .section-body {
+      max-width:800px;
+    }
+
+    .editor-container {
+      margin:@component-padding/2 0 0;
+      padding:0 0 @component-padding;
+    }
+
+    .section-heading, .sub-section h3 {
+      border-bottom:1px solid fade(@pane-item-border-color, 20%);
+      background:@tool-panel-background-color;
+      font-size:13px;
+      font-weight:500;
+      margin:-@component-padding -@component-padding @component-padding;
+      padding:0 @component-padding;
+      line-height:@component-padding*3;
+      color:@text-color;
+    }
+
+    div:empty {
+      display:none;
+    }
+
+    .sub-section {
+      margin-top:@component-padding;
+      clear:both;
+    }
+
+    .sub-section h3 {
+      border-top:1px solid fade(@pane-item-border-color, 20%);
+    }
+  }
+
+  .table {
+    th {
+      border:none;
+    }
+
+    td {
+      border-color:fade(@pane-item-border-color, 20%);
+    }
+  }
+
+  .packages {
+    .featured-message {
+      margin:@component-padding 0;
+    }
+
+    .search-container {
+      margin:-@component-padding 0;
+    }
+  }
+
+  .container.package-container {
+    margin-top:-@component-padding;
+  }
+
+  .container > .row {
+    margin:0 -@component-padding;
+  }
+
+  .available-package-view {
+    background:none;
+    border:1px solid fade(@pane-item-border-color, 20%);
+    border-width:0 0 1px;
+    padding:@component-padding;
+    border-radius:0;
+    margin-bottom:0;
+    background:@pane-item-background-color;
+
+    .card-name {
+      font-weight:500;
+    }
+
+    .package-description {
+      color:@text-color-subtle;
+    }
+
+    .meta > div {
+      margin-top:@component-padding / 2;
+    }
+
+    .meta .author {
+      margin-left:8px;
+    }
+  }
+
+  .themes-panel .control-group {
+    margin-top:@component-padding;
+  }
+}

@@ -1,0 +1,118 @@
+atom-panel.modal {
+  color: @text-color;
+  background-color: transparent;
+  padding: @component-padding @component-padding 0;
+
+  .loading {
+    position:absolute;
+    right:@component-padding * 1.5;
+    top:4px;
+    color:@text-color-subtle;
+    vertical-align:middle;
+    font-size:@font-size + 1;
+
+    .badge {
+      margin-top:-1px;
+    }
+  }
+
+  .error-message {
+    border-top:1px solid fade(@pane-item-border-color, 50%);
+    background:#fff;
+    padding:@component-padding;
+    line-height:1;
+    color:@text-color-subtle;
+    margin:0 -@component-padding;
+    font-style:italic;
+
+    &:empty {
+      display:none;
+    }
+  }
+
+  atom-text-editor[mini] {
+    margin: 0 0 @component-padding;
+    font-size:@font-size + 1;
+  }
+
+  .select-list ol.list-group,
+  &.select-list ol.list-group {
+    background-color: #fff;
+    margin:0 -@component-padding;
+    border-top:1px solid fade(@pane-item-border-color, 50%);
+    font-size:@font-size + 1;
+
+    li {
+      padding: @component-padding;
+      border-bottom: 1px solid fade(@overlay-border-color, 5%);
+      font-weight:500;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      &.two-lines {
+        padding: @component-padding/2 @component-padding;
+
+        &.selected .secondary-line {
+          color:#fff;
+        }
+      }
+
+      .status.icon {
+        float: right;
+        margin-left: @component-icon-padding;
+        &:before {
+          margin-right: 0;
+        }
+      }
+
+      &.selected {
+        background:@background-color-selected;
+        color:@text-color-selected;
+
+        .status.icon {
+          color: @text-color-selected;
+        }
+      }
+    }
+  }
+
+  .primary-line.icon:before {
+    display:none;
+  }
+
+  .secondary-line {
+    opacity:0.6;
+    font-size:@font-size;
+    font-weight:normal;
+
+    &.no-icon {
+      padding-left:0;
+    }
+
+    &.icon:before {
+      display:none;
+    }
+  }
+
+
+  & > * {
+    position: relative; // fixes stacking order
+  }
+
+  // Container
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: @overlay-background-color;
+    border-top: 1px solid @pane-item-border-color;
+    box-shadow: 0  5px 20px fade(#000, 20%), fade(#000, 10%) 0 0 0 1px;
+  }
+
+}

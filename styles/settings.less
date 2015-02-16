@@ -15,6 +15,9 @@
       &:before {
         content: none;
       }
+      &:after {
+        content: none;
+      }
     }
   }
 
@@ -58,7 +61,7 @@
     }
 
     .editor-container {
-      margin:@component-padding/2 0 0;
+      margin:@component-padding 0 0;
       padding:0 0 @component-padding;
     }
 
@@ -72,8 +75,12 @@
       line-height:@component-padding*3;
       color:@text-color;
 
+      .btn {
+        top:5px;
+      }
+
       & + .container {
-        padding-top:@component-padding;
+        padding-top:0;
       }
     }
 
@@ -107,38 +114,20 @@
     }
 
     .search-container {
-      margin:-@component-padding 0;
+      margin:-@component-padding 0 0;
+
+      .btn-group {
+        margin-top:@component-padding;
+      }
     }
   }
 
-  h3 + .container.package-container .row {
-    margin-top:-@component-padding;
-  }
-
-  .container.package-container {
-    margin-top:-@component-padding;
-  }
-
-  .container > .row {
-    margin:0 -@component-padding @component-padding;
-  }
-
-  .container .featured-message {
-    margin-top:@component-padding*2;
-  }
-
-  .container + .container {
-    margin-top:-@component-padding;
-  }
-
-  .available-package-view {
-    background:none;
-    border:1px solid fade(@pane-item-border-color, 20%);
-    border-width:0 0 1px;
+  .installed-package-view, .available-package-view, .package-update-view .thumbnail {
+    background:@tool-panel-background-color;
+    border-radius:5px;
+    border-color:fade(@pane-item-border-color, 20%);
     padding:@component-padding;
-    border-radius:0;
-    margin-bottom:0;
-    background:@pane-item-background-color;
+    margin-bottom:@component-padding;
 
     .card-name {
       font-weight:500;
@@ -155,9 +144,7 @@
     .meta .author {
       margin-left:8px;
     }
-  }
 
-  .installed-package-view {
     .link {
       margin:0;
     }
@@ -184,5 +171,9 @@
     & + .section {
       margin-top:-1px;
     }
+  }
+
+  .package-update-view.col-md-6 {
+    padding:0 @component-padding;
   }
 }

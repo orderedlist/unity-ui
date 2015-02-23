@@ -75,6 +75,7 @@
 
   .list-group li {
     background:#fff;
+    font-size:@font-size + 1;
     padding:0 @component-padding;
     line-height:@component-padding * 2.5;
     border-top: 1px solid fade(@overlay-border-color, 5%);
@@ -86,10 +87,6 @@
     &.selected {
       background:@background-color-selected;
       color:@text-color-selected;
-
-      .character-match {
-        color:@text-color-selected;
-      }
     }
   }
 }

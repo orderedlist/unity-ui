@@ -21,7 +21,6 @@
     border-left:1px solid #b7b5b7;
     display:table-cell;
     background:@tab-background-color;
-    -webkit-transition:background 0.2s linear;
 
     &:first-child {
       border-left:none;
@@ -93,8 +92,12 @@
     }
   }
 
-  &:hover .tab .close-icon {
-    display:block;
+  &:hover .tab {
+    transition:background 0.2s linear;
+
+    .close-icon {
+      display:block;
+    }
   }
 
   .tab.modified:not(:hover) .close-icon {
@@ -116,6 +119,7 @@
       border-right-color:#ADADAD;
       border-left-color:#ADADAD;
       color:#727272;
+      background:#ECECEC;
     }
 
     .tab.active,

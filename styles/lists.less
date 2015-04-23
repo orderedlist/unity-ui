@@ -6,7 +6,7 @@
     line-height:@item-height;
     min-height:@item-height;
   }
-
+  ta
   &.has-collapsable-children .list-nested-item.collapsed > .list-item:before {
     content:'▶';
     font-size:10px;
@@ -100,5 +100,18 @@
   li.ui-sortable-placeholder {
     visibility: visible !important;
     background-color: darken(@pane-item-background-color, 10%);
+  }
+}
+
+.select-list ol.list-group,
+&.select-list ol.list-group {
+  border-radius:5px;
+  overflow:hidden;
+  background-clip:content-box;
+  // We want to highlight the background of the list items because we dont
+  // know their size.
+  li.selected {
+    background-color: @background-color-selected;
+    &:before{ display: none; }
   }
 }

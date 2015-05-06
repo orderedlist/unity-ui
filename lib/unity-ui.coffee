@@ -10,9 +10,13 @@ removeClass = (el, klass) ->
   el.className = classes.join(' ')
 
 module.exports =
-  configDefaults:
-    showIcons: false
-    colorStatusIndicatorsInTreeView: false
+  config:
+    showIcons:
+      type: 'boolean'
+      default: false
+    colorStatusIndicatorsInTreeView:
+      type: 'boolean'
+      default: false
 
   activate: (state) ->
     atom.config.observe 'unity-ui.showIcons', ->

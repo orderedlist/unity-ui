@@ -10,6 +10,19 @@
   }
 }
 
-autocomplete-suggestion-list.select-list.popover-list .suggestion-list-scroller {
-  border-radius:5px;
+autocomplete-suggestion-list.select-list.popover-list {
+
+  .suggestion-list-scroller {
+    border-radius:5px 5px 0 0;
+
+    .selected .icon {
+      color:inherit;
+      background-color:rgba(0,0,0,0.1);
+    }
+  }
+
+  .suggestion-description {
+    border-top:1px solid fade(@pane-item-border-color, 50%);
+    padding:6px 8px;
+  }
 }

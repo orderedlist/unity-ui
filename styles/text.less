@@ -89,6 +89,20 @@ code {
   color: darken(@text-color-highlight, 18%);
 }
 
+.results-view .selected {
+  &::before {
+    content: '\00a0';
+  }
+
+  .highlight-info {
+    color: inherit;
+  }
+
+  .preview {
+    color: #fff;
+  }
+}
+
 .background-message {
   font-weight:200;
 

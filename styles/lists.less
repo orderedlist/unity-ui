@@ -47,12 +47,12 @@
   }
 }
 
-.fuzzy-finder .list-group .character-match {
+.list-group .character-match {
   color: @text-color-highlight;
   font-weight: inherit;
 }
 
-.fuzzy-finder .list-group .selected .character-match {
+.list-group .selected .character-match {
   color: @background-color-highlight;
 }
 
@@ -121,5 +121,19 @@
   li.selected {
     background-color: @background-color-selected;
     &:before{ display: none; }
+  }
+}
+
+.list-group {
+  .key-binding {
+    background-color:#eee;
+    margin-right:4px;
+    font-size:13px;
+    vertical-align: middle;
+  }
+
+  .selected .key-binding {
+    background:#fff;
+    color:#555;
   }
 }

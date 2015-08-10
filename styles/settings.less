@@ -10,20 +10,23 @@
   }
 
   .checkbox {
-    padding-left: 20px;
+    padding-left: 0;
 
     input[type="checkbox"] {
       all: unset;
       -webkit-appearance: checkbox;
-      float: left;
-      margin: 2px 0 0 -20px;
       cursor: default;
+      margin: 0 4px 0 0;
       &:before {
         content: none;
       }
       &:after {
         content: none;
       }
+    }
+
+    .setting-description {
+      padding-left: 16px;
     }
 
     label {

@@ -70,6 +70,14 @@
     background-color: inherit;
   }
 
+  .sub-section .sub-section-heading {
+    cursor: default;
+
+    &:after {
+      line-height: 36px;
+    }
+  }
+
   .section, .section:first-child, .section:last-child {
     padding:@component-padding;
     border-color:fade(@pane-item-border-color, 20%);
@@ -84,10 +92,6 @@
 
     .editor-container {
       padding:0 0 @component-padding;
-    }
-
-    .sub-section .sub-section-heading:after {
-      line-height: 36px;
     }
 
     .section-heading, .sub-section h3 {

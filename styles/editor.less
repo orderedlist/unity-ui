@@ -2,13 +2,13 @@ atom-text-editor[mini] {
   padding-left: 0;
   font-size:@font-size;
   padding:4px 0;
-  border-radius: @component-border-radius;
+  border-radius: 0;
   color: @text-color-highlight;
-  border:none;
+  border: 1px solid #dedede;
   font-family:@font-family;
   background-color: @input-background-color;
-  padding-left: @component-padding/2;
-  box-shadow:0 0 3px 7px fade(#92bcea, 0), 0 1px 0 rgba(0,0,0,0.1);
+  padding-left: 3px;
+  box-shadow:0 0 3px 7px fade(#92bcea, 0);
   transition:box-shadow 0.1s ease-in-out;
   height:24px;
 
@@ -32,7 +32,8 @@ atom-text-editor[mini] {
     opacity:1;
     outline:none;
     box-shadow:0 0 0px 3px #92bcea;
-    border:none;
+    border: 1px solid transparent;
+    border-radius: @component-border-radius;
 
     .selection .region {
       background-color: #B2D7FF;

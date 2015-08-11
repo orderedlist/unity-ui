@@ -1,23 +1,36 @@
 .settings-view {
 
+  .setting-title {
+    font-size: 1em;
+    color: #222;
+  }
+
   .icon:before {
     opacity:0.3;
   }
 
   .checkbox {
-    padding-left: 20px;
+    padding-left: 0;
 
     input[type="checkbox"] {
       all: unset;
       -webkit-appearance: checkbox;
-      float: left;
-      margin: 2px 0 0 -20px;
+      cursor: default;
+      margin: 0 4px 0 0;
       &:before {
         content: none;
       }
       &:after {
         content: none;
       }
+    }
+
+    .setting-description {
+      padding-left: 16px;
+    }
+
+    label {
+      cursor: default;
     }
   }
 
@@ -37,6 +50,7 @@
         border-bottom:1px solid fade(@pane-item-border-color, 20%);
 
         a {
+          cursor: default;
           padding:0 @component-padding;
           line-height:@component-padding*3;
         }
@@ -46,6 +60,22 @@
 
   div > section.section.settings-panel {
     border-top:1px solid fade(@pane-item-border-color, 20%);
+  }
+
+  .section-heading-count {
+    margin-left: 1em;
+    margin-top: -1px;
+    color: #999;
+    padding: 0;
+    background-color: inherit;
+  }
+
+  .sub-section .sub-section-heading {
+    cursor: default;
+
+    &:after {
+      line-height: 36px;
+    }
   }
 
   .section, .section:first-child, .section:last-child {
@@ -61,7 +91,6 @@
     }
 
     .editor-container {
-      margin:@component-padding 0 0;
       padding:0 0 @component-padding;
     }
 

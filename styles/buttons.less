@@ -1,8 +1,11 @@
 .btn {
+  cursor: default;
   font-size:@font-size;
   height:24px;
-  box-shadow:0 0 3px 7px fade(#92bcea, 0), 0 1px 0 rgba(0,0,0,0.1);
-  transition:box-shadow 0.1s ease-in-out;
+  border-top: 1px solid #c8c8c8;
+  border-left: 1px solid #c2c2c2;
+  border-right: 1px solid #c2c2c2;
+  border-bottom: 1px solid #acacac;
 
   &:active {
     background:#f4f4f4;
@@ -78,7 +81,7 @@
     &:hover {
       color:@text-color-selected;
     }
-    
+
     &:active, &.selected {
       background:darken(@background-color-error, 10%);
       color:@text-color-selected;
@@ -93,19 +96,24 @@
 
 .btn-group {
   .btn {
-    box-shadow:rgba(0,0,0,0.1) 0 1px 0;
     margin:0;
-    border:none;
+    border-top: 1px solid #c8c8c8;
+    border-left: 1px solid #c2c2c2;
+    border-right: 1px solid #c2c2c2;
+    border-bottom: 1px solid #acacac;
 
-    & + .btn {
-      box-shadow:inset rgba(0,0,0,0.05) 1px 0 0, rgba(0,0,0,0.1) 0 1px 0;
-      margin-left:0;
+    &:first-child {
+      border-left: 1px solid #c2c2c2;
+    }
+
+    &:last-child {
+      border-right: 1px solid #c2c2c2;
     }
 
     &.selected {
       background:#6a6a6a;
       color:#fff;
-      box-shadow:inset rgba(0,0,0,0.15) 1px 0 0, inset rgba(0,0,0,0.15) -1px 0 0, rgba(0,0,0,0.1) 0 1px 0;
+      box-shadow:inset rgba(0,0,0,0.15) 1px 0 0, inset rgba(0,0,0,0.15) -1px 0 0;
 
       & + .btn {
         box-shadow:rgba(0,0,0,0.1) 0 1px 0;

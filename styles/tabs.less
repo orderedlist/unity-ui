@@ -2,7 +2,7 @@
   border-top:1px solid @pane-item-border-color;
   border-bottom:1px solid #b7b5b7;
   font-size:@font-size - 1;
-  height:27px;
+  height:24px;
   background: linear-gradient(@tab-background-color,#C7C6C7);
   display:table;
   table-layout: fixed;
@@ -14,13 +14,13 @@
     width:100%;
     box-sizing:border-box;
     padding:0 20px!important;
-    line-height:24px;
+    line-height:22px;
     color:#696869;
     text-align:center;
     position:relative;
-    border-left:1px solid #b7b5b7;
+    border-left:1px solid #a4a2a4;
     display:table-cell;
-    background:@tab-background-color;
+    background: linear-gradient(#c2c0c2, #bbb9bb);
 
     &:first-child {
       border-left:none;
@@ -37,17 +37,17 @@
     }
 
     &:hover {
-      background:#bcbcbc;
+      background: linear-gradient(#b9b7b9, #b2b0b2);
     }
   }
 
   .tab.active,
   .tab:hover.active {
     color:#202020;
-    background:@tab-background-color-active;
+    background: linear-gradient(#dedcde, #d7d5d7);
     border-width:1px 0 1px 1px;
     border-top-color:#B5B4B5;
-    border-left-color:#B7B6B7;
+    border-left-color:#a2a1a2;
     border-bottom-color:#A8A7A8;
     width:100%;
 
@@ -67,7 +67,7 @@
   .tab .close-icon {
     color:rgb(93, 93, 93) !important;
     cursor:default;
-    top:4px;
+    top:3px;
     left:4px;
     height:16px;
     width:16px;
@@ -80,16 +80,20 @@
 
     &:before {
       content:'✕';
-      position:absolute;
-      top:2px;
-      left:2px;
-      width:12px;
-      height:13px;
+      width:16px;
+      height:16px;
+      line-height: 17px;
+      font-size: 11px;
+      display: block;
     }
 
     &:hover {
-      background:rgba(0,0,0,0.1);
+      background: linear-gradient(#a3a1a3, #9f9d9f);
     }
+  }
+
+  .tab.active .close-icon:hover {
+    background: linear-gradient(#c5c3c5, #c1bfc1);
   }
 
   &:hover .tab {
@@ -102,10 +106,9 @@
 
   .tab.modified:not(:hover) .close-icon {
     opacity:1;
-    top: 8px;
+    top: 7px;
     left: 8px;
     display:inline-block;
-
   }
 
   .tab:hover .close-icon {

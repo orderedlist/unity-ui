@@ -2,6 +2,7 @@ atom-panel.modal {
   color: @text-color;
   background-color: transparent;
   padding: @component-padding @component-padding 0;
+  border-top:none !important;
 
   .loading {
     position:absolute;
@@ -96,7 +97,6 @@ atom-panel.modal {
     }
   }
 
-
   & > * {
     position: relative; // fixes stacking order
   }
@@ -111,7 +111,6 @@ atom-panel.modal {
     bottom: 0;
     z-index: 0;
     background-color: @overlay-background-color;
-    border-top: 1px solid @pane-item-border-color;
     box-shadow: 0  5px 20px fade(#000, 20%), fade(#000, 10%) 0 0 0 1px;
   }
 

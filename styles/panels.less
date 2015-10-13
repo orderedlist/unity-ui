@@ -52,10 +52,13 @@ atom-panel {
 .status-bar {
   color: fadeout(@text-color-highlight, 30%);
   height:26px;
-  line-height:23px;
-  padding:0;
+  line-height:16px;
   background:linear-gradient(#e4e4e4, #d8d8d8);
   border-color:#a1a1a1;
+
+  .flexbox-repaint-hack {
+    padding:3px 0;
+  }
 
   .status-bar-left {
     margin-left:@component-padding;

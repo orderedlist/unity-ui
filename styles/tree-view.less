@@ -1,14 +1,7 @@
 @item-height: 21px;
 
-.tree-view {
+.tree-view-scroller {
   background:@tree-view-background-color;
-  font-size: @font-size - 1;
-  -webkit-transform:scale(1);
-
-  -webkit-backface-visibility:hidden;
-  font-size:@font-size - 1;
-  padding:4px 0 4px 15px;
-  color:@text-color;
 
   .is-blurred & {
     background:#f8f8f8;
@@ -17,6 +10,16 @@
       background:greyscale(@background-color-highlight);
     }
   }
+}
+
+.tree-view {
+  font-size: @font-size - 1;
+  -webkit-transform:scale(1);
+
+  -webkit-backface-visibility:hidden;
+  font-size:@font-size - 1;
+  padding:4px 0 4px 15px;
+  color:@text-color;
 
   .fullscreen & {
     border-top:none;

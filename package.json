@@ -1,7 +1,7 @@
 {
   "name": "unity-ui",
   "theme": "ui",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "main": "./lib/unity-ui",
   "private": false,
   "description": "An Atom theme for a more native experience on OS X.",

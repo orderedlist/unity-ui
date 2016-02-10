@@ -1,0 +1,28 @@
+atom-pane-axis.horizontal {
+  atom-pane:not(:first-child) {
+    border-left: 1px solid @tool-panel-border-color;
+  }
+}
+
+atom-pane-axis.vertical {
+  atom-pane {
+    border-left: 1px solid @tool-panel-border-color;
+  }
+
+  &:first-child {
+    atom-pane {
+      border-left:none;
+    }
+  }
+
+  atom-pane:not(:first-child) {
+    border-top: 1px solid @tool-panel-border-color;
+  }
+}
+
+atom-pane-resize-handle {
+  &.vertical {
+    margin-top: -4px;
+    margin-bottom: -4px;
+  }
+}

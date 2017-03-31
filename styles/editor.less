@@ -11,22 +11,20 @@ atom-text-editor[mini] {
   transition:box-shadow 0.2s ease-in-out;
   min-height:24px;
 
-  &,
-  &.editor {
-    .placeholder-text {
-      color: @text-color-subtle;
-    }
-    .selection .region {
-      background-color: #ededed;
-    }
-    .cursor {
-      border-color: #222;
-      border-width: 1px;
-    }
+  .placeholder-text {
+    color: @text-color-subtle;
   }
 
-  &.is-focused,
-  &.is-focused.editor {
+  .selection .region {
+    background-color: #ededed;
+  }
+
+  .cursor {
+    border-color: #222;
+    border-width: 1px;
+  }
+
+  &.is-focused {
     background-color: #fff;
     opacity:1;
     outline:none;
@@ -35,7 +33,7 @@ atom-text-editor[mini] {
     border-radius: @component-border-radius;
 
     .selection .region {
-      background-color: #B2D7FF;
+      background-color: #B2D7FF !important;
     }
   }
 }

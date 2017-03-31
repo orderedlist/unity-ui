@@ -3,25 +3,26 @@
   border-bottom:1px solid #b7b5b7;
   border-radius: 0;
   font-size:@font-size - 1;
-  height:24px;
+  height:@tab-height;
+  overflow: hidden;
   background: linear-gradient(@tab-background-color,#C7C6C7);
-  display:table;
-  table-layout: fixed;
   width:100%;
   padding:0;
   -webkit-transform:scale(1);
 
   .tab {
     width:100%;
+    max-width: 100%;
     box-sizing:border-box;
     padding:0 20px!important;
-    line-height:22px;
+    line-height:@tab-height;
+    height: @tab-height;
     color:#696869;
     text-align:center;
     position:relative;
     border-left:1px solid #a4a2a4;
-    display:table-cell;
     background: linear-gradient(#c2c0c2, #bbb9bb);
+    flex: 1;
 
     &:first-child {
       border-left:none;
@@ -51,6 +52,7 @@
     border-left-color:#a2a1a2;
     border-bottom-color:#A8A7A8;
     width:100%;
+    flex: 1;
 
     & .title {
       padding:0;
@@ -68,7 +70,7 @@
   .tab .close-icon {
     color:rgb(93, 93, 93) !important;
     cursor:default;
-    top:3px;
+    top:4px;
     left:4px;
     height:16px;
     width:16px;
@@ -134,5 +136,30 @@
 
   .icon:before {
     margin-right:3px;
+  }
+
+  // Dragging ----------------------
+
+  .tab.is-dragging {
+    opacity: .5;
+    .close-icon,
+    &:before {
+      visibility: hidden;
+    }
+  }
+
+  .placeholder {
+    margin: 0;
+    height: @tab-height;
+    background: @background-color-selected;
+    pointer-events: none;
+
+    &:last-child {
+      margin-left: -2px;
+    }
+
+    &:first-child {
+      margin-left: 1px;
+    }
   }
 }

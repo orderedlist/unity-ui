@@ -103,14 +103,25 @@
       padding:0 @component-padding;
       line-height:@component-padding*3;
       color:@text-color;
+      display: block;
 
       .btn {
         top:5px;
+
+        &.pull-right {
+          margin-left: @component-padding/2;
+        }
       }
 
       & + .container {
         padding-top:0;
       }
+    }
+
+    .updates-heading-container .section-heading {
+      border: 0;
+      background: none;
+      margin: 0;
     }
 
     .sub-section {
@@ -121,6 +132,12 @@
     .sub-section h3 {
       border-top:1px solid fade(@pane-item-border-color, 20%);
     }
+  }
+
+  .updates-heading-container {
+    border-bottom:1px solid fade(@pane-item-border-color, 20%);
+    background:@tool-panel-background-color;
+    margin: -@component-padding -@component-padding @component-padding;
   }
 
   .table {

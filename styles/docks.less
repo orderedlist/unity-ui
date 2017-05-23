@@ -1,0 +1,67 @@
+.atom-dock-inner.atom-dock-open {
+  &.left {
+    border-right: 1px solid @tree-view-border-color;
+  }
+
+  &.right {
+    border-left: 1px solid @tree-view-border-color;
+  }
+}
+
+.atom-dock-toggle-button {
+  width: 200px;
+  height: 200px;
+
+  &.left,
+  &.right {
+    width: 50px;
+  }
+
+  .atom-dock-toggle-button-inner {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 0;
+    background: rgba(0,0,0,0.4);
+
+
+    &.left {
+      .icon {
+        font-size: 64px;
+        transform: translateX(71px) translateY(-10px);
+
+        &:before {
+          font-size: 32px;
+        }
+      }
+    }
+
+    &.right {
+      .icon {
+        font-size: 64px;
+        transform: translateX(-71px) translateY(-10px);
+
+        &:before {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
+
+.atom-dock-resize-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+
+  &.left {
+    right: -3px;
+    width: 8px;
+  }
+
+  &.right {
+    left: -3px;
+    width: 8px;
+  }
+}
